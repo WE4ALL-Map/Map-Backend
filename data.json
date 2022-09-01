@@ -1,0 +1,17 @@
+{
+  "berlin": {
+    "lat": 52.52,
+    "long": 13.405,
+    "partners": 3
+  },
+  "hamburg": {
+    "lat": 53.5511,
+    "long": 9.9937,
+    "partners": 5
+  },
+  "munich": {
+    "lat": 48.1351,
+    "long": 11.582,
+    "partners": 1
+  }
+}
