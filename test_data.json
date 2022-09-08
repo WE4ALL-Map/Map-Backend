@@ -1,0 +1,12 @@
+{
+  "foo": {
+    "lat": 1.0,
+    "long": 2.0,
+    "partners": 3
+  },
+  "bar": {
+    "lat": 4.0,
+    "long": 5.0,
+    "partners": 6
+  }
+}
