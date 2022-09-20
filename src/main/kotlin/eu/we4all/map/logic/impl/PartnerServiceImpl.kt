@@ -1,7 +1,7 @@
 package eu.we4all.map.logic.impl
 
 import eu.we4all.map.data.City
-import eu.we4all.map.logic.Filter
+import eu.we4all.map.logic.filters.Filter
 import eu.we4all.map.logic.PartnerService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
