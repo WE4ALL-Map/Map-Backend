@@ -1,15 +1,18 @@
 {
   "berlin": {
+    "fullName": "Berlin",
     "lat": 52.52,
     "long": 13.405,
     "partners": 3
   },
   "hamburg": {
+    "fullName": "Hamburg",
     "lat": 53.5511,
     "long": 9.9937,
     "partners": 5
   },
   "munich": {
+    "fullName": "München",
     "lat": 48.1351,
     "long": 11.582,
     "partners": 1

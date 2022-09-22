@@ -5,6 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class City(
+    val fullName: String,
     @SerialName("lat") val latitude: Float,
     @SerialName("long") val longitude: Float,
     val partners: Int
