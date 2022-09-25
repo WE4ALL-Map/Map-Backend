@@ -15,6 +15,13 @@ fun Route.cities(partnerService: PartnerService, filterService: FilterService) {
         call.respond(cities)
     }
 
+    route("/names") {
+        get {
+            val cityNames = partnerService.getCityNames()
+            call.respond(cityNames)
+        }
+    }
+
     route("/filtered") {
         get {
             val filters: List<Filter>
