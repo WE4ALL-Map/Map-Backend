@@ -18,9 +18,11 @@ class PartnerServiceImpl constructor(path: String) : PartnerService {
         cities = Json.decodeFromStream(stream)
     }
 
-    override fun getAllCities(): Map<String, City> {
-        return cities
-    }
+    override fun getCityNames(): Map<String, String> =
+        buildMap { cities.forEach { (city, data) -> put(city, data.fullName) } }
+
+    override fun getAllCities(): Map<String, City> =
+        cities
 
     override fun getFilteredCities(filters: List<Filter>): Map<String, City> {
         var filteredCities = cities
