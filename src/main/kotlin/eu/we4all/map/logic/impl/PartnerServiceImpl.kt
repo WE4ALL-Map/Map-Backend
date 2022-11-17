@@ -1,7 +1,6 @@
 package eu.we4all.map.logic.impl
 
 import eu.we4all.map.data.City
-import eu.we4all.map.logic.filters.Filter
 import eu.we4all.map.logic.PartnerService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -23,14 +22,4 @@ class PartnerServiceImpl constructor(path: String) : PartnerService {
 
     override fun getAllCities(): Map<String, City> =
         cities
-
-    override fun getFilteredCities(filters: List<Filter>): Map<String, City> {
-        var filteredCities = cities
-
-        for (filter in filters) {
-            filteredCities = filter.apply(filteredCities)
-        }
-
-        return filteredCities
-    }
 }
