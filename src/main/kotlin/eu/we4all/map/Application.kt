@@ -1,6 +1,5 @@
 package eu.we4all.map
 
-import eu.we4all.map.logic.impl.FilterServiceImpl
 import eu.we4all.map.logic.impl.PartnerServiceImpl
 import eu.we4all.map.plugins.configureHTTP
 import eu.we4all.map.plugins.configureRouting
@@ -12,6 +11,6 @@ fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
         configureHTTP()
         installContentNegotiation()
-        configureRouting(PartnerServiceImpl("data.json"), FilterServiceImpl())
+        configureRouting(PartnerServiceImpl("data.json"))
     }.start(wait = true)
 }
