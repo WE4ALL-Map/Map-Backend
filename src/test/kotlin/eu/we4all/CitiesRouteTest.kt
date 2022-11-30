@@ -1,9 +1,7 @@
 package eu.we4all
 
 import eu.we4all.map.data.City
-import eu.we4all.map.logic.FilterService
 import eu.we4all.map.logic.PartnerService
-import eu.we4all.map.logic.impl.FilterServiceImpl
 import eu.we4all.map.plugins.configureHTTP
 import eu.we4all.map.plugins.configureRouting
 import eu.we4all.map.plugins.installContentNegotiation
@@ -15,10 +13,10 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class CitiesRouteTest {
-    private fun withTestApplication(testPartnerService: PartnerService, testFilterService: FilterService, builder: suspend ApplicationTestBuilder.() -> Unit) = testApplication {
+    private fun withTestApplication(testPartnerService: PartnerService, builder: suspend ApplicationTestBuilder.() -> Unit) = testApplication {
         application {
             configureHTTP()
-            configureRouting(testPartnerService, testFilterService)
+            configureRouting(testPartnerService)
             installContentNegotiation()
         }
 
@@ -40,7 +38,7 @@ class CitiesRouteTest {
             }
         }
 
-        withTestApplication(partnerServiceMock, FilterServiceImpl()) {
+        withTestApplication(partnerServiceMock) {
             client.get("/cities").apply {
                 assertEquals(HttpStatusCode.OK, status)
                 assertEquals("""{"foo":{"fullName":"Foo","lat":1.0,"long":2.0,"partners":3},"bar":{"fullName":"Bar","lat":4.0,"long":5.0,"partners":6}}""", bodyAsText())
