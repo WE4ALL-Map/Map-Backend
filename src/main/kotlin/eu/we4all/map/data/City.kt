@@ -18,5 +18,6 @@ data class City(
             this.displayName,
             this.center,
             this.boroughs,
+            this.partners.size
         )
 }

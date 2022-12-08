@@ -10,4 +10,5 @@ data class PartialCity(
     @SerialName("display_name") val displayName: String,
     val center: Coordinates,
     val boroughs: @Serializable List<Borough>,
+    @SerialName("partner_count") val partnerCount: Int,
 )
