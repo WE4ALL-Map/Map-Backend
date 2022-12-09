@@ -5,19 +5,10 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class City(
+data class PartialCity(
     val id: SerializableUUID,
     @SerialName("display_name") val displayName: String,
     val center: Coordinates,
     val boroughs: @Serializable List<Borough>,
-    val partners: @Serializable List<Partner>,
-) {
-    fun toPartialCity() =
-        PartialCity(
-            this.id,
-            this.displayName,
-            this.center,
-            this.boroughs,
-            this.partners.size
-        )
-}
+    @SerialName("partner_count") val partnerCount: Int,
+)

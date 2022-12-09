@@ -1,20 +1,125 @@
-{
-  "berlin": {
-    "fullName": "Berlin",
-    "lat": 52.52,
-    "long": 13.405,
-    "partners": 3
-  },
-  "hamburg": {
-    "fullName": "Hamburg",
-    "lat": 53.5511,
-    "long": 9.9937,
-    "partners": 5
-  },
-  "munich": {
-    "fullName": "München",
-    "lat": 48.1351,
-    "long": 11.582,
-    "partners": 1
-  }
-}
+[
+    {
+        "id": "0b9e1520-9148-474f-aa73-bcd859042849",
+        "display_name": "Berlin",
+        "center": {
+            "lat": 52.52,
+            "long": 13.405
+        },
+        "boroughs": [
+            {
+                "id": "6bb5a642-48f3-442e-a815-bf096d3b767e",
+                "display_name": "Pankow",
+                "center": {
+                    "lat": 52.56,
+                    "long": 13.4
+                }
+            },
+            {
+                "id": "d1d87a5d-3926-486d-9ac1-a9495ea0034e",
+                "display_name": "Lichtenberg",
+                "center": {
+                    "lat": 52.53,
+                    "long": 13.5
+                }
+            },
+            {
+                "id": "9cd0efe4-ec9a-46ce-ba77-38c16a7a59cc",
+                "display_name": "Charlottenburg-Wilmersdorf",
+                "center": {
+                    "lat": 52.5,
+                    "long": 13.283
+                }
+            }
+        ],
+        "partners": [
+            {
+                "id": "9dadecac-5056-4595-8333-cc7e91b34218",
+                "borough": "6bb5a642-48f3-442e-a815-bf096d3b767e",
+                "designing": true,
+                "printing": true,
+                "services": [
+                    "Rapid Prototyping",
+                    "Konstruktion",
+                    "3D-Scan",
+                    "Produktentwicklung",
+                    "Neuentwicklung"
+                ],
+                "tags": [
+                    "Prototypen",
+                    "Kleinserie",
+                    "Architektur",
+                    "Modellbau"
+                ]
+            },
+            {
+                "id": "5d797ff2-9991-429a-b8a1-1e77e063bf3f",
+                "borough": "6bb5a642-48f3-442e-a815-bf096d3b767e",
+                "designing": false,
+                "printing": true,
+                "services": [
+                    "Rapid Prototyping",
+                    "3D-Scan"
+                ],
+                "tags": [
+                    "Prototypen",
+                    "Architektur"
+                ]
+            },
+            {
+                "id": "1ab9e12e-e30c-427e-a06c-d97f3815946f",
+                "borough": "d1d87a5d-3926-486d-9ac1-a9495ea0034e",
+                "designing": true,
+                "printing": false,
+                "services": [
+                    "Konstruktion",
+                    "3D Scan"
+                ],
+                "tags": [
+                    "Skulptieren - Kunst"
+                ]
+            },
+            {
+                "id": "af645db9-b8fb-455e-9765-85b4906d8fc1",
+                "borough": "d1d87a5d-3926-486d-9ac1-a9495ea0034e",
+                "designing": false,
+                "printing": true,
+                "services": [
+                    "Rapid Prototyping"
+                ],
+                "tags": [
+                    "Prototypen",
+                    "Architektur"
+                ]
+            },
+            {
+                "id": "ffc8a8f6-c8d2-41f5-8b48-c163e8b411a0",
+                "borough": "d1d87a5d-3926-486d-9ac1-a9495ea0034e",
+                "designing": true,
+                "printing": false,
+                "services": [
+                    "Konstruktion"
+                ],
+                "tags": [
+                    "Maschinenbau",
+                    "Technische Bauteile",
+                    "Ersatzteile"
+                ]
+            },
+            {
+                "id": "05d3b210-472e-4e37-832c-abeecac50e2e",
+                "borough": "9cd0efe4-ec9a-46ce-ba77-38c16a7a59cc",
+                "designing": true,
+                "printing": false,
+                "services": [
+                    "Konstruktion",
+                    "Produktentwicklung",
+                    "Neuentwicklung"
+                ],
+                "tags": [
+                    "Automobil"
+                ]
+            }
+        ]
+    }
+]
